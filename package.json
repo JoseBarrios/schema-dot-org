@@ -1,5 +1,5 @@
 {
-  "name": "schema-json",
+  "name": "schema-org",
   "version": "0.0.1",
   "description": "A collection of schema.org compliant JSON schemas Edit",
   "main": "index.js",
@@ -8,17 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoseBarrios/schema-json.git"
+    "url": "git+https://github.com/JoseBarrios/schema-org.git"
   },
   "keywords": [
     "JSON",
     "Schema",
+		"org",
     "Schema.org"
   ],
   "author": "JoseBarrios",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JoseBarrios/schema-json/issues"
+    "url": "https://github.com/JoseBarrios/schema-org/issues"
   },
-  "homepage": "https://github.com/JoseBarrios/schema-json#readme"
+  "homepage": "https://github.com/JoseBarrios/schema-org#readme",
+  "dependencies": {
+    "ajv": "^5.2.3"
+  }
 }
