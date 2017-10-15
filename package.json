@@ -4,7 +4,7 @@
   "description": "A collection of schema.org compliant JSON schemas Edit",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+		"test": "./node_modules/mocha/bin/mocha tests/"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "keywords": [
     "JSON",
     "Schema",
-		"org",
+    "org",
     "Schema.org"
   ],
   "author": "JoseBarrios",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/JoseBarrios/schema-org#readme",
   "dependencies": {
-    "ajv": "^5.2.3"
+    "ajv": "^5.2.3",
+    "mocha": "^4.0.1"
   }
 }

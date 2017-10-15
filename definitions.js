@@ -1,9 +1,8 @@
 const definitions = {};
-definitions.action = require('./definitions/action.json')
 
-//Action
-definitions.action.type = definitions.action.type;
-definitions.action.properties = definitions.action.properties;
-definitions.action.required = definitions.action.required;
+definitions.action = require('./definitions/action.json')
+definitions.text = require("./definitions/text.json");
+definitions.url = require("./definitions/url.json");
+definitions.thing = require('./definitions/thing.json')
 
 module.exports = definitions;

@@ -1,0 +1,79 @@
+{
+	"title": "Thing",
+	"description": "The most generic type of item.",
+	"type" : "object",
+	"properties": {
+
+		"additionalType": {
+			"title": "additionalType",
+			"description" : "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+			"$ref": "#/definitions/url"
+		},
+
+		"alternateName":{
+			"title": "alternateName",
+			"description" : "An alias for the item.",
+			"$ref": "#/definitions/text"
+		},
+
+		"description": {
+			"title": "description",
+			"description": "A description of the item.",
+			"$ref": "#/definitions/text"
+		},
+
+		"disambiguatingDescription": {
+			"title": "disambiguatingDescription",
+			"description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+			"$ref": "#/definitions/text"
+		},
+
+		"identifier": {
+			"title": "identifier",
+			"description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links",
+			"anyOf": [
+				{"$ref": "#/definitions/url"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+
+		"image": {
+			"title": "image",
+			"description": "An image of the item.",
+			"anyOf": [
+				{"$ref": "#/definitions/url"}
+			]
+		},
+
+		"mainEntityOfPage": {
+			"title": "mainEntityOfPage",
+			"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. ",
+			"anyOf": [
+				{"$ref": "#/definitions/url"}
+			]
+		},
+
+		"name": {
+			"title": "name",
+			"description": "The name of the item.",
+			"$ref": "#/definitions/text"
+		},
+
+		"potentialAction": {
+			"title": "potentialAction",
+			"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role."
+		},
+
+		"sameAs": {
+			"title":"sameAs",
+			"description":"URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+			"$ref": "#/definitions/url"
+		},
+
+		"url": {
+			"title": "url",
+			"description": "URL of the item.",
+			"$ref": "#/definitions/url"
+		}
+	}
+}

@@ -1,33 +1,42 @@
 //Where all the individual schemas are stored
 const definitions = require('./definitions.js');
-
-//const AJV = require('ajv');
-//const ajv = new AJV();
-
+const AJV = require('ajv');
+const ajv = new AJV();
 
 class SchemaORG {
 
-	//TODO
 	constructor(){
 
 	}
 
-	//TODO: Pending on ES6 support
-	//Static properties should be added when they are supported by the ES6 spec.
-	//For now, we can work around it by adding a static getter. This approach is
-	//subpar, since the getter returns a new instance every time, which is not
-	//ideal for large-scale applications
-	static get Action(){ return definitions.action; }
+	//return a copy of the definitions, not the definitions themselves
+	//this allows us to remove unwanted properties (circular references)
+	//when validating schemas
+	get definitions(){ return JSON.parse(JSON.stringify(definitions)); }
+	//No dependencies
+	get text(){ return this.definitions.text; }
+	//No dependencies
+	get url(){ return this.definitions.url; }
 
+	get thing(){
+		let thing = this.definitions.thing;
+		thing.definitions = this.definitions;
+		delete thing.definitions.thing;
+		return thing;
+	}
+
+	get action(){
+		let action = this.definitions.action;
+		action.definitions = this.definitions;
+		delete action.definitions.action;
+		return action;
+	}
+
+	validate(schemaType, data, printError=true){
+		let valid = ajv.validate(schemaType, data);
+		if (!valid && printError){ console.error(schemaType.title, ajv.errorsText()); }
+		return valid;
+	}
 }
 
-
-
-//TESTS
-let action = SchemaORG.Action;
-console.log(action)
-//console.log(SchemaORG)
-
-
-
-module.exports = SchemaORG;
+module.exports = new SchemaORG();

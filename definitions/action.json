@@ -1,7 +1,4 @@
 {
-	"type" : "object",
-	"required": [],
-	"properties": {
-		"whatever": "x"
-	}
+	"title": "Action",
+	"type" : "object"
 }
