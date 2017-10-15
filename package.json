@@ -1,10 +1,10 @@
 {
   "name": "schema-org",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of schema.org compliant JSON schemas Edit",
   "main": "index.js",
   "scripts": {
-		"test": "./node_modules/mocha/bin/mocha tests/"
+    "test": "./node_modules/mocha/bin/mocha tests/"
   },
   "repository": {
     "type": "git",
