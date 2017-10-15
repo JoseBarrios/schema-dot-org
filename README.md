@@ -4,7 +4,7 @@ A collection of schema.org compliant JSON schemas
 ### Use
 ```js
 
-const schema = require('schema-org');
+const schema = require('schema-dot-org');
 
 let thing = {};
 thing.url = "http://google.com";
