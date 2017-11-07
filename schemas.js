@@ -10,6 +10,7 @@ schemas.enumeration = require('./schema/enumeration.json')
 schemas.event = require("./schema/event.json");
 schemas.imageObject = require('./schema/image-object.json')
 schemas.locationFeatureSpecification = require('./schema/location-feature-specification.json')
+schemas.number = require('./schema/number.json')
 schemas.organization = require('./schema/organization.json')
 schemas.person = require('./schema/person.json')
 schemas.place = require('./schema/place.json')
