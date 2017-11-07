@@ -90,6 +90,13 @@ describe('SchemaORG Class\n', function() {
 				assert.equal(schema.validate([], schema.structuredValue, false), false);
 			});
 
+			it('class', function() {
+				let data = {};
+				data.category = "Mamal";
+				data.supersededBy = "Animal";
+				assert.equal(schema.validate(data, schema.class), true);
+			});
+
 
 
 			it('thing', function() {
