@@ -83,6 +83,13 @@ describe('SchemaORG Class\n', function() {
 				assert.equal(schema.validate(invalid, schema.boolean, false), false);
 			});
 
+			it('structuredValue', function() {
+				assert.equal(schema.validate({}, schema.structuredValue), true);
+				assert.equal(schema.validate(undefined, schema.structuredValue, false), false);
+				assert.equal(schema.validate(null, schema.structuredValue, false), false);
+				assert.equal(schema.validate([], schema.structuredValue, false), false);
+			});
+
 
 
 			it('thing', function() {

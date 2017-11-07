@@ -23,6 +23,8 @@ class SchemaORG {
 	get text(){ return this.schemas.text; }
 	get number(){ return this.schemas.number; }
 	get boolean(){ return this.schemas.boolean; }
+	get url(){ return this.schemas.url; }
+	get structuredValue(){ return this.schemas.structuredValue; }
 
 	get thing(){
 		let schema = this.schemas.thing;
@@ -30,12 +32,11 @@ class SchemaORG {
 		return schema;
 	}
 
-	get url(){ return this.schemas.url; }
 
 
-	validate(data, schema, logging=true){
+	validate(data, schema, logging=false){
 		let valid = ajv.validate(schema, data);
-		if (!valid && logging){
+		if (logging){
 			console.error(schema.title, ajv.errorsText());
 		}
 		return valid;

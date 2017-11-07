@@ -1,0 +1,18 @@
+{
+	"title":"xxx",
+	"description":"xxx",
+
+	"anyOf": [
+		{ "type": "undefined" },
+		{ "type": "null" }
+		{ "type": "object" }
+	],
+
+
+	"properties": {
+		"xxx":{
+			"description": "xxx",
+			"$ref": "#/definitions/xxx"
+		}
+	}
+}
