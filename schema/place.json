@@ -1,0 +1,38 @@
+{
+	"title":"Place",
+	"description":"Entities that have a somewhat fixed, physical extension.",
+	"properties": {
+
+		"additionalProperty":{
+			"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.",
+			"$ref": "#/definitions/propertyValue"
+		},
+
+		"address": {
+			"description":"Physical address of the item.",
+			"anyOf": [
+				{"$ref": "#/definitions/postalAddress"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+
+		"aggregateRating": {
+			"description":"The overall rating, based on a collection of reviews or ratings, of the item.",
+			"$ref": "#/definitions/aggregateRating"
+		},
+
+
+		"amenityFeature": {
+			"description":"An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.",
+			"$ref": "#/definitions/locationFeatureSpecification"
+		},
+
+		"branchCode": {
+			"description":"A short textual code (also called 'store code') that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.",
+			"$ref": "#/definitions/text"
+		}
+
+	}
+
+
+}

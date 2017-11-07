@@ -1,5 +1,5 @@
 //Where all the individual schemas are stored
-const definitions = require('./definitions.js');
+const schemas = require('./schemas.js');
 const AJV = require('ajv');
 const ajv = new AJV();
 
@@ -9,40 +9,34 @@ class SchemaORG {
 
 	}
 
-	//return a copy of the definitions, not the definitions themselves
-	//this allows us to remove unwanted properties (circular references)
-	//when validating schemas
-	get definitions(){ return JSON.parse(JSON.stringify(definitions)); }
+	//return a *copy* of the schemas object, not the original object itself
+	//this allows us to remove circular references when validating schemas
+	get schemas(){ return JSON.parse(JSON.stringify(schemas)); }
 
 
 	get action(){
-		let action = this.definitions.action;
-		action.definitions = this.definitions;
-		//Eliminate cycle dependecy
-		delete action.definitions.action;
+		let action = this.schemas.action;
+		action.definitions = this.schemas;
 		return action;
 	}
 
-	//No dependencies
-	get text(){ return this.definitions.text; }
+	get text(){ return this.schemas.text; }
 
-	//Depends on:
 	get thing(){
-		let thing = this.definitions.thing;
-		thing.definitions = this.definitions;
-		//Eliminate cycle dependecy
-		delete thing.definitions.thing;
-		return thing;
+		let data = this.schemas.thing;
+		//return data, including all definitions
+		//eventually, we'll cherry pick only the relevant
+		//definitions, instead of sending all definitions
+		data.definitions = this.schemas;
+		return data;
 	}
 
-	//No dependencies
-	get url(){ return this.definitions.url; }
+	get url(){ return this.schemas.url; }
 
 
-
-	validate(schemaType, data, printError=true){
-		let valid = ajv.validate(schemaType, data);
-		if (!valid && printError){ console.error(schemaType.title, ajv.errorsText()); }
+	validate(data, definition, printError=true){
+		let valid = ajv.validate(definition, data);
+		if (!valid && printError){ console.error(definition.title, ajv.errorsText()); }
 		return valid;
 	}
 }

@@ -1,0 +1,6 @@
+{
+	"title":"date",
+	"description":"A date value in ISO 8601 date format.",
+	"type" : "string",
+	"format":"date-time"
+}

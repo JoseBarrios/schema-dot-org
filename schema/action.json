@@ -23,7 +23,7 @@
 		"endTime": {
 			"title":"endTime",
 			"description":"The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December.",
-			"$ref": "#/definitions/dateTime"
+			"$ref": "#/definitions/date"
 		},
 
 		"error": {
@@ -75,7 +75,7 @@
 		"startTime": {
 			"title":"startTime",
 			"description":"The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December.",
-			"$ref": "#/definitions/dateTime"
+			"$ref": "#/definitions/date"
 		},
 
 

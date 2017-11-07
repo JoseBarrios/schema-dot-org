@@ -7,10 +7,10 @@ A collection of schema.org compliant JSON schemas
 
 const schema = require('schema-dot-org');
 
-let thing = {};
-thing.url = "http://google.com";
+let example = {};
+example.url = "http://google.com";
 
-let isValid = schema.validate(schema.thing, thing);//true
+let isValid = schema.validate(example, schema.thing);//true
 
 ```
 ### Test
@@ -22,3 +22,4 @@ $ npm test
 - Thing (incomplete)
 - Text
 - URL
+- Date
