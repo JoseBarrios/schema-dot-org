@@ -1,4 +1,8 @@
 {
 	"type" : "string",
-	"format" : "uri"
+	"anyOf": [
+		{"format": "ipv4"},
+		{"format": "ipv6"},
+		{"format": "uri"}
+	]
 }

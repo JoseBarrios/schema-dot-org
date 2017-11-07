@@ -11,6 +11,29 @@ describe('SchemaORG Class\n', function() {
 
 		describe('#validate', function() {
 
+			it('url', function() {
+				let valid = 'https://www.google.com';
+				assert.equal(schema.validate(valid, schema.url), true);
+				valid = 'http://35.182.10.112/';
+				assert.equal(schema.validate(valid, schema.url), true);
+				valid = 'mailto:some@email.com';
+				assert.equal(schema.validate(valid, schema.url), true);
+				//Negative tests
+				let invalid = 'text';
+				assert.equal(schema.validate(invalid, schema.url, false), false);
+				invalid = 1;
+				assert.equal(schema.validate(invalid, schema.url, false), false);
+				invalid = true;
+				assert.equal(schema.validate(invalid, schema.url, false), false);
+				assert.equal(schema.validate(invalid, schema.url, false), false);
+				invalid = [];
+				assert.equal(schema.validate(invalid, schema.url, false), false);
+				invalid = {};
+				assert.equal(schema.validate(invalid, schema.url, false), false);
+			});
+
+
+
 			it('text', function() {
 				let valid = 'Some text';
 				assert.equal(schema.validate(valid, schema.text), true);
