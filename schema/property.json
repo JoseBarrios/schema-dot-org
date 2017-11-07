@@ -1,0 +1,45 @@
+{
+	"title":"Property",
+	"description":"A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.",
+
+	"anyOf": [
+		{ "type": "object" }
+	],
+
+
+	"properties": {
+		"category":{
+			"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"},
+				{"$ref": "#/definitions/thing"}
+			]
+		},
+		"domainIncludes":{
+			"description": "No comment",
+			"anyOf": [
+				{"$ref": "#/definitions/class"}
+			]
+		},
+		"inverseOf":{
+			"description": "Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.",
+			"anyOf": [
+				{"$ref": "#/definitions/property"}
+			]
+		},
+		"rangeIncludes":{
+			"description": "No comment",
+			"anyOf": [
+				{"$ref": "#/definitions/class"}
+			]
+		},
+		"supersededBy":{
+			"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+			"anyOf": [
+				{"$ref": "#/definitions/class"},
+				{"$ref": "#/definitions/enumeration"},
+				{"$ref": "#/definitions/property"}
+			]
+		}
+	}
+}

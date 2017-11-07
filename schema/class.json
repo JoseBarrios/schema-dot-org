@@ -1,0 +1,26 @@
+{
+	"title":"Class",
+	"description":"A class, also often called a 'Type'; equivalent to rdfs:Class.",
+	"anyOf": [
+		{ "type": "object" }
+	],
+
+	"properties": {
+
+		"category":{
+			"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"},
+				{"$ref": "#/definitions/thing"}
+			]
+		},
+		"supersededBy":{
+			"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+			"anyOf": [
+				{"$ref": "#/definitions/class"},
+				{"$ref": "#/definitions/enumeration"},
+				{"$ref": "#/definitions/property"}
+			]
+		}
+	}
+}

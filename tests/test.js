@@ -97,6 +97,22 @@ describe('SchemaORG Class\n', function() {
 				assert.equal(schema.validate(data, schema.class), true);
 			});
 
+			it('property', function() {
+				let data = {};
+				data.category = "Mamal";
+				data.domainIncludes = {};
+				data.domainIncludes.category = "Mamal";
+				data.domainIncludes.supersededBy = "Animal";
+				data.rangeIncludes = {};
+				data.rangeIncludes.category = "Mamal";
+				data.rangeIncludes.supersededBy = "Animal";
+				data.supersededBy = {};
+				data.supersededBy.category = "Mamal";
+				data.supersededBy.supersededBy = "Animal";
+				data.inverseOf = JSON.parse(JSON.stringify(data));
+				assert.equal(schema.validate(data, schema.property), true);
+			});
+
 
 
 			it('thing', function() {

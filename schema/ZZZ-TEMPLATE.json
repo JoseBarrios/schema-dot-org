@@ -12,7 +12,10 @@
 	"properties": {
 		"xxx":{
 			"description": "xxx",
-			"$ref": "#/definitions/xxx"
+			"anyOf": [
+				{"$ref": "#/definitions/text"},
+				{"$ref": "#/definitions/thing"}
+			]
 		}
 	}
 }

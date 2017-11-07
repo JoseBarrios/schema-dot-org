@@ -26,6 +26,20 @@ class SchemaORG {
 	get url(){ return this.schemas.url; }
 	get structuredValue(){ return this.schemas.structuredValue; }
 
+	get class(){
+		let schema = this.schemas.class;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get property(){
+		let schema = this.schemas.property;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+
 	get thing(){
 		let schema = this.schemas.thing;
 		schema.definitions = this.schemas.definitions;
