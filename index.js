@@ -44,7 +44,23 @@ class SchemaORG {
 		return schema;
 	}
 
+	get quantitativeValue(){
+		let schema = this.schemas.quantitativeValue;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
 
+	get qualitativeValue(){
+		let schema = this.schemas.qualitativeValue;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get propertyValue(){
+		let schema = this.schemas.propertyValue;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
 
 	get thing(){
 		let schema = this.schemas.thing;

@@ -13,9 +13,9 @@
 		"xxx":{
 			"description": "xxx",
 			"anyOf": [
-				{"$ref": "#/definitions/text"},
-				{"$ref": "#/definitions/thing"}
+				{"$ref": "#/definitions/xxx"},
+				{"$ref": "#/definitions/xxx"}
 			]
-		}
+		},
 	}
 }

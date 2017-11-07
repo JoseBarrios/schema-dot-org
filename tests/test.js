@@ -126,6 +126,37 @@ describe('SchemaORG Class\n', function() {
 				assert.equal(schema.validate(data, schema.enumeration), true);
 			});
 
+			it('qualitativeValue', function() {
+				let data = {};
+				data.additionalProperty = {};
+				data.additionalProperty.maxValue = 3;
+				data.additionalProperty.value = 1;
+				data.equal = {};
+				data.equal.valueReference = {};
+				data.equal.valueReference.value = 'One';
+				data.valueReference = {};
+				data.valueReference.value = 'Uno';
+				assert.equal(schema.validate(data, schema.qualitativeValue), true);
+			});
+
+			it('quantitativeValue', function() {
+				let data = {};
+				data.maxValue = 10;
+				data.minValue = 0;
+				data.value = true;
+				data.unitCode = 'XXX';
+				assert.equal(schema.validate(data, schema.quantitativeValue), true);
+			});
+
+			it('propertyValue', function() {
+				let data = {};
+				data.maxValue = 10;
+				data.minValue = 0;
+				data.value = true;
+				data.unitCode = 'XXX';
+				assert.equal(schema.validate(data, schema.propertyValue), true);
+			});
+
 
 
 			it('thing', function() {

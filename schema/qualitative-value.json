@@ -1,1 +1,64 @@
-{}
+{
+	"title":"QualitativeValue",
+	"description":"A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.",
+
+	"anyOf": [
+		{ "type": "object" }
+	],
+
+
+	"properties": {
+		"additionalProperty":{
+			"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"equal":{
+			"description": "This ordering relation for qualitative values indicates that the subject is equal to the object.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"greater":{
+			"description": "This ordering relation for qualitative values indicates that the subject is greater than the object.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"greaterOrEqual":{
+			"description": "This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"lesser":{
+			"description": "This ordering relation for qualitative values indicates that the subject is lesser than the object.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"lesserOrEqual":{
+			"description": "This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"nonEqual":{
+			"description": "This ordering relation for qualitative values indicates that the subject is not equal to the object.",
+			"anyOf": [
+				{"$ref": "#/definitions/qualitativeValue"}
+			]
+		},
+		"valueReference":{
+			"description": "A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.",
+			"anyOf": [
+				{"$ref": "#/definitions/enumeration"},
+				{"$ref": "#/definitions/propertyValue"},
+				{"$ref": "#/definitions/qualitativeValue"},
+				{"$ref": "#/definitions/quantitativeValue"},
+				{"$ref": "#/definitions/structuredValue"}
+			]
+		}
+	}
+}
