@@ -11,26 +11,41 @@ describe('SchemaORG Class\n', function() {
 
 		describe('#validate', function() {
 
-			it('thing: should return true with valid object', function() {
-				let validThing = {};
-				validThing.additionalType = "http://google.com";
-				assert.equal(schema.validate(validThing, schema.thing), true);
-				validThing.alternateName = "alternateName";
-				assert.equal(schema.validate(validThing, schema.thing), true);
-				validThing.description = "description";
-				assert.equal(schema.validate(validThing, schema.thing), true);
-				validThing.disambiguatingDescription = "disambiguatingDescription";
-				assert.equal(schema.validate(validThing, schema.thing), true);
-				validThing.identifier = "identifier";
-				assert.equal(schema.validate(validThing, schema.thing), true);
-				validThing.image = "http://google.com/someimage.png";
-				assert.equal(schema.validate(validThing, schema.thing), true);
+			it('text', function() {
+				let valid = 'Some text';
+				assert.equal(schema.validate(valid, schema.text), true);
+				//Negative tests
+				let invalid = 1;
+				assert.equal(schema.validate(invalid, schema.text, false), false);
+				invalid = true;
+				assert.equal(schema.validate(invalid, schema.text, false), false);
+				assert.equal(schema.validate(invalid, schema.text, false), false);
+				invalid = [];
+				assert.equal(schema.validate(invalid, schema.text, false), false);
+				invalid = {};
+				assert.equal(schema.validate(invalid, schema.text, false), false);
 			});
 
-			it('thing: should return false with invalid object', function() {
-				let invalidThing = {};
-				invalidThing.image = 1;
-				assert.equal(schema.validate(invalidThing, schema.thing, false), false);
+
+
+			it('thing', function() {
+				let valid = {};
+				valid.additionalType = "http://google.com";
+				assert.equal(schema.validate(valid, schema.thing), true);
+				valid.alternateName = "alternateName";
+				assert.equal(schema.validate(valid, schema.thing), true);
+				valid.description = "description";
+				assert.equal(schema.validate(valid, schema.thing), true);
+				valid.disambiguatingDescription = "disambiguatingDescription";
+				assert.equal(schema.validate(valid, schema.thing), true);
+				valid.identifier = "identifier";
+				assert.equal(schema.validate(valid, schema.thing), true);
+				valid.image = "http://google.com/someimage.png";
+				assert.equal(schema.validate(valid, schema.thing), true);
+				//Negative tests
+				let invalid = {};
+				invalid.image = 1;
+				assert.equal(schema.validate(invalid, schema.thing, false), false);
 			});
 
     });
