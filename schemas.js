@@ -23,5 +23,7 @@ schemas.thing = require('./schema/thing.json')
 schemas.url = require("./schema/url.json");
 
 
-schemas.definitions = JSON.parse(JSON.stringify(schemas));
+const definitions = JSON.parse(JSON.stringify(schemas))
+schemas.definitions = definitions;
+
 module.exports = schemas;

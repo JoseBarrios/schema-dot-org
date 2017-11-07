@@ -23,12 +23,9 @@ class SchemaORG {
 	get text(){ return this.schemas.text; }
 
 	get thing(){
-		let data = this.schemas.thing;
-		//return data, including all definitions
-		//eventually, we'll cherry pick only the relevant
-		//definitions, instead of sending all definitions
-		data.definitions = this.schemas.definitions;
-		return data;
+		let schema = this.schemas.thing;
+		schema.definitions = this.schemas.definitions;
+		return schema;
 	}
 
 	get url(){ return this.schemas.url; }
