@@ -3,6 +3,7 @@ const schemas = {};
 schemas.actionStatusType = require('./schema/action-status-type.json')
 schemas.action = require('./schema/action.json')
 schemas.aggregateRating = require('./schema/aggregate-rating.json')
+schemas.boolean = require('./schema/boolean.json')
 schemas.creativeWork = require('./schema/creative-work.json')
 schemas.date = require('./schema/date.json')
 schemas.entryPoint = require('./schema/entry-point.json')

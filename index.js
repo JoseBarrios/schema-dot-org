@@ -22,6 +22,7 @@ class SchemaORG {
 
 	get text(){ return this.schemas.text; }
 	get number(){ return this.schemas.number; }
+	get boolean(){ return this.schemas.boolean; }
 
 	get thing(){
 		let schema = this.schemas.thing;

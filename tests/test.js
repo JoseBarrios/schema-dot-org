@@ -69,6 +69,20 @@ describe('SchemaORG Class\n', function() {
 			});
 
 
+			it('boolean', function() {
+				let valid = true;
+				assert.equal(schema.validate(valid, schema.boolean), true);
+				valid = false;
+				assert.equal(schema.validate(valid, schema.boolean), true);
+				//Negative tests
+				let invalid = '1';
+				assert.equal(schema.validate(invalid, schema.boolean, false), false);
+				invalid = [];
+				assert.equal(schema.validate(invalid, schema.boolean, false), false);
+				invalid = {};
+				assert.equal(schema.validate(invalid, schema.boolean, false), false);
+			});
+
 
 
 			it('thing', function() {
