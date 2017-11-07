@@ -93,7 +93,8 @@ describe('SchemaORG Class\n', function() {
 			it('class', function() {
 				let data = {};
 				data.category = "Mamal";
-				data.supersededBy = "Animal";
+				data.supersededBy = {};
+				data.supersededBy.category = "Animal";
 				assert.equal(schema.validate(data, schema.class), true);
 			});
 
@@ -102,15 +103,27 @@ describe('SchemaORG Class\n', function() {
 				data.category = "Mamal";
 				data.domainIncludes = {};
 				data.domainIncludes.category = "Mamal";
-				data.domainIncludes.supersededBy = "Animal";
+				data.domainIncludes.supersededBy = {};
+				data.domainIncludes.supersededBy.category = "Animal";
 				data.rangeIncludes = {};
 				data.rangeIncludes.category = "Mamal";
-				data.rangeIncludes.supersededBy = "Animal";
+				data.rangeIncludes.supersededBy = {};
+				data.rangeIncludes.supersededBy.category = "Animal";
 				data.supersededBy = {};
 				data.supersededBy.category = "Mamal";
-				data.supersededBy.supersededBy = "Animal";
+				data.supersededBy.supersededBy = {};
+				data.supersededBy.supersededBy.category = "Animal";
 				data.inverseOf = JSON.parse(JSON.stringify(data));
 				assert.equal(schema.validate(data, schema.property), true);
+			});
+
+			it('enumeration', function() {
+				let data = {};
+				data.supersededBy = {};
+				data.supersededBy.category = "Mamal";
+				data.supersededBy.supersededBy = {};
+				data.supersededBy.supersededBy.category = "Animal";
+				assert.equal(schema.validate(data, schema.enumeration), true);
 			});
 
 

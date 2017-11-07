@@ -38,6 +38,12 @@ class SchemaORG {
 		return schema;
 	}
 
+	get enumeration(){
+		let schema = this.schemas.enumeration;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
 
 
 	get thing(){
