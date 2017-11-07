@@ -1,4 +1,5 @@
 {
+	"title": "URL",
 	"type" : "string",
 	"anyOf": [
 		{"format": "ipv4"},
