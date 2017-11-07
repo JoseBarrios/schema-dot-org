@@ -31,9 +31,9 @@ class SchemaORG {
 	get url(){ return this.schemas.url; }
 
 
-	validate(data, schema, printError=true){
+	validate(data, schema, logging=true){
 		let valid = ajv.validate(schema, data);
-		if (!valid && printError){
+		if (!valid && logging){
 			console.error(schema.title, ajv.errorsText());
 		}
 		return valid;
