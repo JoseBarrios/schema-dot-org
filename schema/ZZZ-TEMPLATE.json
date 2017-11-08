@@ -1,12 +1,7 @@
 {
 	"title":"xxx",
 	"description":"xxx",
-
-	"anyOf": [
-		{ "type": "undefined" },
-		{ "type": "object" }
-	],
-
+	"type": "object",
 
 	"properties": {
 		"xxx":{

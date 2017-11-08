@@ -81,7 +81,33 @@ class SchemaORG {
 	}
 
 	get brand(){
-		let schema = this.schemas.creativeWork;
+		let schema = this.schemas.brand;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get review(){
+		let schema = this.schemas.review;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get contactPoint(){
+		let schema = this.schemas.contactPoint;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get administrativeArea(){
+		let schema = this.schemas.administrativeArea;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+
+	get xxx(){
+		let schema = this.schemas.xxx;
 		schema.definitions = this.schemas.definitions;
 		return schema;
 	}

@@ -1,0 +1,145 @@
+{
+	"title":"AdministrativeArea",
+	"description":"A geographical region, typically under the jurisdiction of a particular government. ",
+	"type": "object",
+
+	"properties": {
+		"additionalProperty":{
+			"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. ",
+			"anyOf": [
+				{"$ref": "#/definitions/propertyValue"}
+			]
+		},
+		"address":{
+			"description": "Physical address of the item.",
+			"anyOf": [
+				{"$ref": "#/definitions/postalAddress"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"aggregateRating":{
+			"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+			"anyOf": [
+				{"$ref": "#/definitions/aggregateRating"}
+			]
+		},
+		"amenityFeature":{
+			"description": "An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.",
+			"anyOf": [
+				{"$ref": "#/definitions/locationFeatureSpecification"}
+			]
+		},
+		"branchCode":{
+			"description": "A short textual code (also called 'store code') that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"containedInPlace":{
+			"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace",
+			"anyOf": [
+				{"$ref": "#/definitions/place"}
+			]
+		},
+		"event":{
+			"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+			"anyOf": [
+				{"$ref": "#/definitions/event"}
+			]
+		},
+		"faxNumber":{
+			"description": "The fax number.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"geo":{
+			"description": "The geo coordinates of the place.",
+			"anyOf": [
+				{"$ref": "#/definitions/geoCoordinates"},
+				{"$ref": "#/definitions/geoShape"}
+			]
+		},
+		"globalLocationNumber":{
+			"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"hasMap":{
+			"description": "The URL of a place",
+			"anyOf": [
+				{"$ref": "#/definitions/map"},
+				{"$ref": "#/definitions/url"}
+			]
+		},
+		"isAccessibleForFree":{
+			"description": "A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
+			"anyOf": [
+				{"$ref": "#/definitions/boolean"}
+			]
+		},
+		"isicV4":{
+			"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"logo":{
+			"description": "An associated logo.",
+			"anyOf": [
+				{"$ref": "#/definitions/imageObject"},
+				{"$ref": "#/definitions/URL"}
+			]
+		},
+		"maximumAttendeeCapacity":{
+			"description": "The total number of individuals that may attend an event or venue.",
+			"anyOf": [
+				{"$ref": "#/definitions/integer"}
+			]
+		},
+		"openingHoursSpecification":{
+			"description": "The opening hours of a certain place.",
+			"anyOf": [
+				{"$ref": "#/definitions/openingHoursSpecification"}
+			]
+		},
+		"photo":{
+			"description": "A photograph of this place. Supersedes photos.",
+			"anyOf": [
+				{"$ref": "#/definitions/imageObject"},
+				{"$ref": "#/definitions/photograph"}
+			]
+		},
+		"publicAccess":{
+			"description": "A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value",
+			"anyOf": [
+				{"$ref": "#/definitions/boolean"}
+			]
+		},
+		"review":{
+			"description": "A review of the item. Supersedes reviews.",
+			"anyOf": [
+				{"$ref": "#/definitions/review"}
+			]
+		},
+		"smokingAllowed":{
+			"description": "Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.",
+			"anyOf": [
+				{"$ref": "#/definitions/boolean"}
+			]
+		},
+		"specialOpeningHoursSpecification":{
+			"description": "The special opening hours of a certain place.",
+			"anyOf": [
+				{"$ref": "#/definitions/openingHoursSpecification"}
+			]
+		},
+		"telephone":{
+			"description": "The telephone number",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		}
+	}
+}

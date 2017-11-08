@@ -5,15 +5,14 @@ t commit -a -m "Added Creative Work, and Person. Lots of work still needs to be 
 - Comment
 - Integer
 - DateTime
+- GeoCoordinates
 - Audience
 - Educational Organization
 - Place
-- Contact Point
 - Gender Type
 - Offer Catalog
 - Distance
 - Video Object
-- Contact Point
 - AggregateRating
 - Country
 - PriceSpecification
@@ -28,16 +27,20 @@ t commit -a -m "Added Creative Work, and Person. Lots of work still needs to be 
 - Organization
 - Comment
 - Integer
+- OpeningHoursSpecification
+- Photograph
 - Place
 - DateTime
 - AlignmentObject
 - Language
 - InteractionCounter
 - Product
+-AdministrativeArea
+-GeoShape
+-OpeningHoursSpecification
 - Offer
 - PublicationEvent
 - Event
 - PublicationEvent
-- Review
 - Duration
 - VideoObject

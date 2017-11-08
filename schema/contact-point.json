@@ -1,0 +1,71 @@
+{
+	"title":"ContactPoint",
+	"description":"A contact point—for example, a Customer Complaints department.",
+
+	"anyOf": [
+		{ "type": "object" }
+	],
+
+
+	"properties": {
+		"areaServed":{
+			"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+			"anyOf": [
+				{"$ref": "#/definitions/administrativeArea"},
+				{"$ref": "#/definitions/geoShape"},
+				{"$ref": "#/definitions/place"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"availableLanguage":{
+			"description": "A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. See also inLanguage",
+			"anyOf": [
+				{"$ref": "#/definitions/language"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"contactOption":{
+			"description": "An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).",
+			"anyOf": [
+				{"$ref": "#/definitions/ContactPointOption"}
+			]
+		},
+		"contactType":{
+			"description": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"email":{
+			"description": "An email address",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"faxNumber":{
+			"description": "The fax number",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"hoursAvailable":{
+			"description": "The hours during which this service or contact is available.",
+			"anyOf": [
+				{"$ref": "#/definitions/openingHoursSpecification"}
+			]
+		},
+		"productSupported":{
+			"description": "The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones').",
+			"anyOf": [
+				{"$ref": "#/definitions/product"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"telephone":{
+			"description": "The telephone number",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		}
+	}
+}
