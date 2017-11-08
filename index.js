@@ -68,6 +68,19 @@ class SchemaORG {
 		return schema;
 	}
 
+	get person(){
+		let schema = this.schemas.person;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get creativeWork(){
+		let schema = this.schemas.creativeWork;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
 
 
 	validate(data, schema, logging=false){

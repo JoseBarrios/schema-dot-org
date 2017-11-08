@@ -158,6 +158,18 @@ describe('SchemaORG Class\n', function() {
 			});
 
 
+			it('person', function() {
+				let data = {};
+				assert.equal(schema.validate(data, schema.person), true);
+			});
+
+			it('creativework', function() {
+				let data = {};
+				assert.equal(schema.validate(data, schema.creativeWork), true);
+			});
+
+
+
 
 			it('thing', function() {
 				let valid = {};
