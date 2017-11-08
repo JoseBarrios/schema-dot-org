@@ -80,6 +80,12 @@ class SchemaORG {
 		return schema;
 	}
 
+	get brand(){
+		let schema = this.schemas.creativeWork;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
 
 
 

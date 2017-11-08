@@ -8,7 +8,6 @@ t commit -a -m "Added Creative Work, and Person. Lots of work still needs to be 
 - Audience
 - Educational Organization
 - Place
-- Brand
 - Contact Point
 - Gender Type
 - Offer Catalog

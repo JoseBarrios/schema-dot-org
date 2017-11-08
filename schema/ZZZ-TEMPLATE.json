@@ -4,7 +4,6 @@
 
 	"anyOf": [
 		{ "type": "undefined" },
-		{ "type": "null" }
 		{ "type": "object" }
 	],
 
