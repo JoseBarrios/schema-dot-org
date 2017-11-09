@@ -27,7 +27,7 @@
 		"contactOption":{
 			"description": "An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).",
 			"anyOf": [
-				{"$ref": "#/definitions/ContactPointOption"}
+				{"$ref": "#/definitions/contactPointOption"}
 			]
 		},
 		"contactType":{

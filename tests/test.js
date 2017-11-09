@@ -76,6 +76,7 @@ describe('SchemaORG Class\n', function() {
 				data = 1.2;
 				assert.equal(schema.validate(data, schema.integer), false);
 			});
+
 			it('time', function() {
 				let data = '13:30:00';
 				assert.equal(schema.validate(data, schema.time), true);
@@ -83,7 +84,19 @@ describe('SchemaORG Class\n', function() {
 				assert.equal(schema.validate(data, schema.time), false);
 			});
 
+			it('dateTime', function() {
+				let data = '13:30:00';
+				assert.equal(schema.validate(data, schema.dateTime), false);
+				data = '2011-10-05T14:48:00Z';
+				assert.equal(schema.validate(data, schema.dateTime), true);
+			});
 
+			it('duration', function() {
+				let data = '13:30:00';
+				assert.equal(schema.validate(data, schema.duration), false);
+				data = 'P3Y6M4DT12H30M5S';
+				assert.equal(schema.validate(data, schema.duration), true);
+			});
 
 
 			it('boolean', function() {

@@ -143,8 +143,94 @@ class SchemaORG {
 		return schema;
 	}
 
+	get dateTime(){
+		let schema = this.schemas.dateTime;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
 	get time(){
 		let schema = this.schemas.time;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+
+	get photograph(){
+		let schema = this.schemas.photograph;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get language(){
+		let schema = this.schemas.language;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+	get contactPointOption(){
+		let schema = this.schemas.contactPointOption;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+	get product(){
+		let schema = this.schemas.product;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+	get audience(){
+		let schema = this.schemas.audience;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get distance(){
+		let schema = this.schemas.distance;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get service(){
+		let schema = this.schemas.service;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+	get serviceChannel(){
+		let schema = this.schemas.serviceChannel;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
+	get duration(){
+		let schema = this.schemas.duration;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get offerCatalog(){
+		let schema = this.schemas.offerCatalog;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get listItem(){
+		let schema = this.schemas.listItem;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get itemListOrderType(){
+		let schema = this.schemas.itemListOrderType;
 		schema.definitions = this.schemas.definitions;
 		return schema;
 	}
