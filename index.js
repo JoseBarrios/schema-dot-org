@@ -117,6 +117,13 @@ class SchemaORG {
 	}
 
 
+	get country(){
+		let schema = this.schemas.country;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
 
 
 	get xxx(){
