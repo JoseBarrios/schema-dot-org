@@ -250,8 +250,7 @@ class SchemaORG {
 	}
 
 
-	//schema.validationError('hello', schema.url);
-	hasErrors(data, schema){
+	validationError(data, schema){
 		let valid = ajv.validate(schema, data);
 		return valid? false : new Error(`${schema.title}: ${ajv.errorsText()}`);
 	}
