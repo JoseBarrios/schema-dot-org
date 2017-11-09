@@ -131,6 +131,13 @@ class SchemaORG {
 	}
 
 
+	get map(){
+		let schema = this.schemas.map;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
 
 	get xxx(){
 		let schema = this.schemas.xxx;

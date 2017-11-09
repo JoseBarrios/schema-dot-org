@@ -1,0 +1,14 @@
+{
+	"title":"Map",
+	"description":"A map.",
+	"type": "object",
+
+	"properties": {
+		"mapType":{
+			"description": "Indicates the kind of Map, from the MapCategoryType Enumeration.",
+			"anyOf": [
+				{"$ref": "#/definitions/mapCategoryType"}
+			]
+		}
+	}
+}

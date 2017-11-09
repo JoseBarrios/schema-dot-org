@@ -19,6 +19,7 @@ schemas.geoCoordinates = require("./schema/geo-coordinates.json");
 schemas.geoShape = require("./schema/geo-shape.json");
 schemas.imageObject = require('./schema/image-object.json')
 schemas.locationFeatureSpecification = require('./schema/location-feature-specification.json')
+schemas.map = require('./schema/map.json')
 schemas.number = require('./schema/number.json')
 schemas.organization = require('./schema/organization.json')
 schemas.person = require('./schema/person.json')
