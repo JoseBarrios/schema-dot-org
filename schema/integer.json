@@ -1,0 +1,6 @@
+{
+	"title":"integer",
+	"description":"Data type: Integer",
+	"type": "number",
+	"multipleOf": 1.0
+}

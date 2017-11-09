@@ -68,6 +68,23 @@ describe('SchemaORG Class\n', function() {
 				assert.equal(schema.validate(invalid, schema.number, false), false);
 			});
 
+			it('integer', function() {
+				let data = 2;
+				assert.equal(schema.validate(data, schema.integer), true);
+				data = 0;
+				assert.equal(schema.validate(data, schema.integer), true);
+				data = 1.2;
+				assert.equal(schema.validate(data, schema.integer), false);
+			});
+			it('time', function() {
+				let data = '13:30:00';
+				assert.equal(schema.validate(data, schema.time), true);
+				data = Date.now();
+				assert.equal(schema.validate(data, schema.time), false);
+			});
+
+
+
 
 			it('boolean', function() {
 				let valid = true;

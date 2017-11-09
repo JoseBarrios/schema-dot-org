@@ -89,7 +89,7 @@
 			"description": "An associated logo.",
 			"anyOf": [
 				{"$ref": "#/definitions/imageObject"},
-				{"$ref": "#/definitions/URL"}
+				{"$ref": "#/definitions/url"}
 			]
 		},
 		"maximumAttendeeCapacity":{

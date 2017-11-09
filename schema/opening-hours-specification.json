@@ -1,0 +1,38 @@
+{
+	"title":"OpeningHoursSpecification",
+	"description":"A structured value providing information about the opening hours of a place or a certain service inside a place.  The place is open if the opens property is specified, and closed otherwise.  If the value for the closes property is less than the value for the opens property then the hour range is assumed to span over the next day.",
+	"type": "object",
+
+	"properties": {
+		"closes":{
+			"description": "The closing hour of the place or service on the given day(s) of the week.",
+			"anyOf": [
+				{"$ref": "#/definitions/time"}
+			]
+		},
+		"dayOfWeek":{
+			"description": "The day of the week for which these opening hours are valid.",
+			"anyOf": [
+				{"$ref": "#/definitions/dayOfWeek"}
+			]
+		},
+		"opens":{
+			"description": "The opening hour of the place or service on the given day(s) of the week.",
+			"anyOf": [
+				{"$ref": "#/definitions/time"}
+			]
+		},
+		"validFrom":{
+			"description": "The date when the item becomes valid.",
+			"anyOf": [
+				{"$ref": "#/definitions/dateTime"}
+			]
+		},
+		"validThrough":{
+			"description": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+			"anyOf": [
+				{"$ref": "#/definitions/dateTime"}
+			]
+		}
+	}
+}

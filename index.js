@@ -137,10 +137,28 @@ class SchemaORG {
 		return schema;
 	}
 
+	get openingHoursSpecification(){
+		let schema = this.schemas.openingHoursSpecification;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get time(){
+		let schema = this.schemas.time;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
 
 
 	get xxx(){
 		let schema = this.schemas.xxx;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+	get integer(){
+		let schema = this.schemas.integer;
 		schema.definitions = this.schemas.definitions;
 		return schema;
 	}

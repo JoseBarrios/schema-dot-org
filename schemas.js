@@ -18,9 +18,12 @@ schemas.event = require("./schema/event.json");
 schemas.geoCoordinates = require("./schema/geo-coordinates.json");
 schemas.geoShape = require("./schema/geo-shape.json");
 schemas.imageObject = require('./schema/image-object.json')
+schemas.integer = require('./schema/integer.json')
 schemas.locationFeatureSpecification = require('./schema/location-feature-specification.json')
 schemas.map = require('./schema/map.json')
+schemas.mapCategoryType = require('./schema/map-category-type.json')
 schemas.number = require('./schema/number.json')
+schemas.openingHoursSpecification = require('./schema/opening-hours-specification.json')
 schemas.organization = require('./schema/organization.json')
 schemas.person = require('./schema/person.json')
 schemas.place = require('./schema/place.json')
@@ -33,6 +36,7 @@ schemas.review = require('./schema/review.json')
 schemas.structuredValue = require('./schema/structured-value.json')
 schemas.text = require("./schema/text.json");
 schemas.thing = require('./schema/thing.json')
+schemas.time = require('./schema/time.json')
 schemas.url = require("./schema/url.json");
 
 

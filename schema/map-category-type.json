@@ -1,0 +1,15 @@
+{
+	"title":"MapCategoryType",
+	"description":"An enumeration of several kinds of Map.",
+	"type": "object",
+	"properties": {
+		"supersededBy":{
+			"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+			"anyOf": [
+				{"$ref": "#/definitions/class"},
+				{"$ref": "#/definitions/enumeration"},
+				{"$ref": "#/definitions/property"}
+			]
+		}
+	}
+}
