@@ -1,1 +1,45 @@
-{}
+{
+	"title":"PostalAddress",
+	"description":"The mailing address.",
+	"type": "object",
+
+	"properties": {
+		"addressCountry":{
+			"description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+			"anyOf": [
+				{"$ref": "#/definitions/country"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"addressLocality":{
+			"description": "The locality. For example, Mountain View.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"addressRegion":{
+			"description": "The region. For example, CA.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"postOfficeBoxNumber":{
+			"description": "The post office box number for PO box addresses.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"postalCode":{
+			"description": "The postal code. For example, 94043.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"streetAddress":{
+			"description": "The street address. For example, 1600 Amphitheatre Pkwy.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		}
+	}
+}

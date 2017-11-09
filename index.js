@@ -110,6 +110,13 @@ class SchemaORG {
 		return schema;
 	}
 
+	get postalAddress(){
+		let schema = this.schemas.postalAddress;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
+
 
 
 	get xxx(){
