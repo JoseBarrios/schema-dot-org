@@ -124,6 +124,12 @@ class SchemaORG {
 	}
 
 
+	get geoShape(){
+		let schema = this.schemas.geoShape;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
 
 
 	get xxx(){

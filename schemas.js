@@ -16,6 +16,7 @@ schemas.entryPoint = require('./schema/entry-point.json')
 schemas.enumeration = require('./schema/enumeration.json')
 schemas.event = require("./schema/event.json");
 schemas.geoCoordinates = require("./schema/geo-coordinates.json");
+schemas.geoShape = require("./schema/geo-shape.json");
 schemas.imageObject = require('./schema/image-object.json')
 schemas.locationFeatureSpecification = require('./schema/location-feature-specification.json')
 schemas.number = require('./schema/number.json')

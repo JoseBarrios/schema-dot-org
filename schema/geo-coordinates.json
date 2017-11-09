@@ -7,7 +7,7 @@
 		"address":{
 			"description": "Physical address of the item.",
 			"anyOf": [
-				{"$ref": "#/definitions/postal-address"},
+				{"$ref": "#/definitions/postalAddress"},
 				{"$ref": "#/definitions/text"}
 			]
 		},
