@@ -104,6 +104,12 @@ class SchemaORG {
 		return schema;
 	}
 
+	get geoCoordinates(){
+		let schema = this.schemas.geoCoordinates;
+		schema.definitions = this.schemas.definitions;
+		return schema;
+	}
+
 
 
 	get xxx(){

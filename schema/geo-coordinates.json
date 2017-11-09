@@ -1,0 +1,49 @@
+{
+	"title":"GeoCoordinates",
+	"description":"The geographic coordinates of a place or event.",
+	"type": "object",
+
+	"properties": {
+		"address":{
+			"description": "Physical address of the item.",
+			"anyOf": [
+				{"$ref": "#/definitions/postal-address"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"addressCountry":{
+			"description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+			"anyOf": [
+				{"$ref": "#/definitions/country"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"elevation":{
+			"description": "The elevation of a location (WGS 84).",
+			"anyOf": [
+				{"$ref": "#/definitions/number"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"latitude":{
+			"description": "The latitude of a location. For example 37.42242 (WGS 84).",
+			"anyOf": [
+				{"$ref": "#/definitions/number"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"longitude":{
+			"description": "The longitude of a location. For example -122.08585 (WGS 84).",
+			"anyOf": [
+				{"$ref": "#/definitions/number"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"postalCode":{
+			"description": "The postal code. For example, 94043.",
+			"anyOf": [
+				{"$ref": "#/definitions/text"}
+			]
+		}
+	}
+}

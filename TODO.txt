@@ -35,7 +35,6 @@ t commit -a -m "Added Creative Work, and Person. Lots of work still needs to be 
 - Language
 - InteractionCounter
 - Product
--AdministrativeArea
 -GeoShape
 -OpeningHoursSpecification
 - Offer
