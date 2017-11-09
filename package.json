@@ -1,6 +1,6 @@
 {
   "name": "schema-dot-org",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A collection of schema.org compliant JSON schemas Edit",
   "main": "index.js",
   "scripts": {
