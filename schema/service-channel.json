@@ -1,0 +1,57 @@
+{
+	"title":"ServiceChannel",
+	"description":"A means for accessing a service, e.g. a government office location, web site, or phone number.",
+	"type": "object",
+
+	"properties": {
+		"availableLanguage":{
+			"description": "A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. See also inLanguage",
+			"anyOf": [
+				{"$ref": "#/definitions/language"},
+				{"$ref": "#/definitions/text"}
+			]
+		},
+		"processingTime":{
+			"description": "Estimated processing time for the service using this channel.",
+			"anyOf": [
+				{"$ref": "#/definitions/duration"}
+			]
+		},
+		"providesService":{
+			"description": "The service provided by this channel.",
+			"anyOf": [
+				{"$ref": "#/definitions/service"}
+			]
+		},
+		"serviceLocation":{
+			"description": "The location (e.g. civic structure, local business, etc.) where a person can go to access the service.",
+			"anyOf": [
+				{"$ref": "#/definitions/place"}
+			]
+		},
+		"servicePhone":{
+			"description": "The phone number to use to access the service.",
+			"anyOf": [
+				{"$ref": "#/definitions/contactPoint"}
+			]
+		},
+		"servicePostalAddress":{
+			"description": "The address for accessing the service by mail.",
+			"anyOf": [
+				{"$ref": "#/definitions/postalAddress"}
+			]
+		},
+		"serviceSmsService":{
+			"description": "The number to access the service by text message.",
+			"anyOf": [
+				{"$ref": "#/definitions/contactPoint"}
+			]
+		},
+		"serviceUrl":{
+			"description": "The website to access the service.",
+			"anyOf": [
+				{"$ref": "#/definitions/url"}
+			]
+		}
+	}
+}

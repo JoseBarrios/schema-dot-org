@@ -1,0 +1,15 @@
+{
+	"title":"ContactPointOption",
+	"description":"Enumerated options related to a ContactPoint.",
+	"type": "object",
+	"properties": {
+		"supersededBy":{
+			"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+			"anyOf": [
+				{"$ref": "#/definitions/class"},
+				{"$ref": "#/definitions/enumeration"},
+				{"$ref": "#/definitions/property"}
+			]
+		}
+	}
+}

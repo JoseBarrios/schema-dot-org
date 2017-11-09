@@ -1,0 +1,20 @@
+{
+	"title":"audience",
+	"description":"Intended audience for an item, i.e. the group for whom the item was created.",
+	"type": "object",
+
+	"properties": {
+		"audienceType":{
+			"description": "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+			"anyOf": [
+				{"$ref": "#/definitions/audience"}
+			]
+		},
+		"geographicArea":{
+			"description": "The geographic area associated with the audience.",
+			"anyOf": [
+				{"$ref": "#/definitions/administrativeArea"}
+			]
+		}
+	}
+}

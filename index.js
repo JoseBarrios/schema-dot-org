@@ -250,13 +250,14 @@ class SchemaORG {
 	}
 
 
-
-
-	validate(data, schema, logging=false){
+	//schema.validationError('hello', schema.url);
+	hasErrors(data, schema){
 		let valid = ajv.validate(schema, data);
-		if (logging){
-			console.error(schema.title, ajv.errorsText());
-		}
+		return valid? false : new Error(`${schema.title}: ${ajv.errorsText()}`);
+	}
+
+	isValid(data, schema, logging=false){
+		let valid = ajv.validate(schema, data);
 		return valid;
 	}
 }
